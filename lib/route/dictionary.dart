@@ -8,7 +8,7 @@ import 'package:word_journey/dictionary/language.dart';
 class DictionaryRoute extends RouteRecord {
   final DictionaryLanguage lang;
 
-  DictionaryRoute(this.lang) : super(lang.symbol, Icons.home, _Body(lang));
+  DictionaryRoute(this.lang) : super(lang.symbol, Icons.book, _Body(lang));
 }
 
 class _Header extends StatelessWidget with PreferredSizeWidget {

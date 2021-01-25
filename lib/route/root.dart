@@ -5,6 +5,11 @@ import 'package:word_journey/route/dictionary.dart';
 
 class Root extends RouterWidget {
   Root({Key key})
-      : super([...DictionaryContainer.instance.languages.map((l) => DictionaryRoute(l))],
-            key: key, resizeToAvoidBottomInset: false);
+      : super(
+          [...DictionaryContainer.instance.languages.map((l) => DictionaryRoute(l))],
+          key: key,
+          selectedFontSize: 12,
+          unselectedFontSize: 12,
+          resizeToAvoidBottomInset: false,
+        );
 }

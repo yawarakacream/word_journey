@@ -4,10 +4,16 @@ class RouterWidget extends StatefulWidget {
   final List<RouteRecord> _routes;
 
   final double iconSize;
+  final double selectedFontSize;
+  final double unselectedFontSize;
   final bool resizeToAvoidBottomInset;
 
   const RouterWidget(this._routes,
-      {Key key, this.iconSize = 24, this.resizeToAvoidBottomInset = true})
+      {Key key,
+      this.iconSize = 24,
+      this.selectedFontSize = 14,
+      this.unselectedFontSize = 12,
+      this.resizeToAvoidBottomInset = true})
       : super(key: key);
 
   @override
@@ -65,6 +71,8 @@ class _RootState extends State<RouterWidget> {
       resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
       bottomNavigationBar: BottomNavigationBar(
         iconSize: widget.iconSize,
+        selectedFontSize: widget.selectedFontSize,
+        unselectedFontSize: widget.unselectedFontSize,
         type: BottomNavigationBarType.fixed,
         items: _barItems,
         currentIndex: _currentIndex,
